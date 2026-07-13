@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Ubwenge Lab</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .contact-hero {
+    min-height: 340px;
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(180deg, rgba(6,12,26,.7), rgba(6,12,26,.82)), url('images/contact-hero.png') center/cover no-repeat;
+  }
+  .contact-hero-box {
+    background: rgba(30,45,80,.5);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 16px;
+    padding: 44px 60px;
+    text-align: center;
+    max-width: 560px;
+  }
+  .contact-hero-box h1 { color: #fff; font-size: 2.2rem; margin-bottom: 10px; }
+  .contact-hero-box p { color: #cfd6e6; margin-bottom: 24px; }
+
+  .intro-text { color: #263049; font-size: 1.1rem; max-width: 1000px; margin-bottom: 40px; }
+  .help-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 26px; margin-bottom: 60px; }
+  .help-card { border: 1px solid #e2e6ef; border-radius: 14px; padding: 30px; }
+  .help-icon { width: 46px; height: 46px; border-radius: 10px; background: #e7effe; color: #2563eb; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 1.2rem; }
+  .help-card h3 { font-size: 1.1rem; margin-bottom: 10px; }
+  .help-card p { color: #5b6478; font-size: 0.92rem; }
+  .help-card strong { color: #1a1f36; }
+
+  .msg-section h2 { color: #2563eb; font-size: 1.6rem; margin-bottom: 30px; }
+  .form-card {
+    background: #f5f7fa;
+    border-radius: 16px;
+    padding: 44px;
+    max-width: 640px;
+  }
+  .form-group { margin-bottom: 22px; }
+  .form-group label { display: block; font-weight: 700; margin-bottom: 8px; font-size: 0.95rem; }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 13px 16px;
+    border-radius: 8px;
+    border: 1px solid #dfe3ea;
+    background: #fff;
+    font-family: inherit;
+    font-size: 0.95rem;
+  }
+  .form-group textarea { resize: vertical; min-height: 120px; }
+  .send-btn {
+    background: #fff;
+    border: 1.5px solid #2563eb;
+    color: #2563eb;
+    font-weight: 700;
+    padding: 13px 34px;
+    border-radius: 8px;
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar dark">
+  <div class="nav-inner">
+    <div class="nav-brand"><div class="nav-logo">U</div>Ubwenge Lab</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="impact.html">Impact</a></li>
+      <li><a href="team.html">Team</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+  </div>
+</nav>
+
+<header class="contact-hero">
+  <div class="contact-hero-box">
+    <h1>Get In Touch</h1>
+    <p>We would love to hear from you</p>
+    <a href="#send-message" class="btn btn-primary">Launch contact Form</a>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <p class="intro-text">Whether you're a healthcare provider interested in partnering, wanting to join, investor exploring opportunities or simply just curious. We are here to connect.</p>
+
+    <h2 style="font-size:1.6rem;color:#2563eb;margin-bottom:30px;">How Can We Help You?</h2>
+    <div class="help-grid">
+      <div class="help-card"><div class="help-icon">💊</div><h3>Pharmacies</h3><p>Join the E-Vuze platform and connect with thousands of patients looking for medicine.<br><strong>Email:</strong> info@ubwengelab.rw</p></div>
+      <div class="help-card"><div class="help-icon">🏥</div><h3>Hospitals & Clinics</h3><p>Partner with us to streamline your appointment system and improve patient flow.<br><strong>Email:</strong> info@ubwengelab.rw</p></div>
+      <div class="help-card"><div class="help-icon">👥</div><h3>Partnerships</h3><p>Collaborate with us on healthcare infrastructure projects and initiatives.<br><strong>Email:</strong> info@ubwengelab.rw</p></div>
+      <div class="help-card"><div class="help-icon">💼</div><h3>Investors</h3><p>Learn more about investment opportunities and our growth plans.<br><strong>Email:</strong> info@ubwengelab.rw</p></div>
+      <div class="help-card"><div class="help-icon">❓</div><h3>General Inquiries</h3><p>Questions about Ubwenge Lab or the E-Vuze platform? Reach out anytime.<br><strong>Email:</strong> info@ubwengelab.rw</p></div>
+      <div class="help-card"><div class="help-icon">💼</div><h3>Careers</h3><p>Interested in joining our team? We're always looking for talented people.<br><strong>Email:</strong> info@ubwengelab.rw</p></div>
+    </div>
+
+    <div class="msg-section" id="send-message">
+      <h2>Send Us A Message</h2>
+      <form class="form-card">
+        <div class="form-group">
+          <label>Full name *</label>
+          <input type="text" placeholder="Your full name">
+        </div>
+        <div class="form-group">
+          <label>Email address *</label>
+          <input type="email" placeholder="your.email@example.com">
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="text" placeholder="+250 781 680 983">
+        </div>
+        <div class="form-group">
+          <label>Subject *</label>
+          <select><option>Select a subject</option></select>
+        </div>
+        <div class="form-group">
+          <label>Message *</label>
+          <textarea placeholder="Tell us how we can help you..."></textarea>
+        </div>
+        <button type="submit" class="send-btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-brand">📈 Ubwenge Lab</div>
+      <p>Building intelligent healthcare infrastructure for Africa</p>
+      <p>We design platforms that transform healthcare delivery, reduce wait times, and integrate AI to guide decisions.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Our Location</h4>
+      <p>Kigali, Rwanda<br>East Africa</p>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <p>Email: info@ubwengelab.rw</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Ubwenge Lab Ltd. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

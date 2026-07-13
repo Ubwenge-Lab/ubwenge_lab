@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team — Ubwenge Lab</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .team-hero {
+    min-height: 460px;
+    display: flex; align-items: center; text-align: center; flex-direction: column; justify-content: center;
+    background: linear-gradient(180deg, rgba(20,28,48,.55), rgba(20,28,48,.72)), url('images/team-hero.png') center/cover no-repeat;
+    color: #fff;
+    padding-bottom: 60px;
+  }
+  .team-hero .eyebrow2 { color: #cfd6e6; font-weight: 600; margin-bottom: 14px; }
+  .team-hero h1 { color: #fff; font-size: 2.4rem; margin-bottom: 40px; }
+  .stat-strip { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; max-width: 900px; width: 100%; }
+  .stat-strip .box { background: rgba(60,80,120,.4); border: 1px solid rgba(255,255,255,.15); border-radius: 12px; padding: 26px; }
+  .stat-strip .box .big { font-size: 2.2rem; font-weight: 800; margin-bottom: 6px; }
+  .stat-strip .box .lbl { color: #cfd6e6; font-size: 0.9rem; }
+
+  .team-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 30px; }
+  @media (max-width: 900px) { .team-grid { grid-template-columns: 1fr; } }
+  .member-card {
+    border: 1px solid #e2e6ef;
+    border-radius: 16px;
+    padding: 28px;
+    text-align: center;
+    position: relative;
+  }
+  .member-avatar-wrap { position: relative; display: inline-block; margin-bottom: 18px; }
+  .member-avatar {
+    width: 84px; height: 84px; border-radius: 50%;
+    background: #e4e6ec; border: 3px solid; display: flex; align-items: center; justify-content: center;
+  }
+  .role-tag {
+    position: absolute; top: -6px; right: -70px;
+    color: #fff; font-size: 0.68rem; font-weight: 700;
+    padding: 4px 12px; border-radius: 12px; white-space: nowrap;
+  }
+  .member-name { font-weight: 700; margin-bottom: 4px; }
+  .member-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 14px; }
+  .member-bio { border-radius: 10px; padding: 16px; font-size: 0.88rem; color: #444d63; margin-bottom: 18px; min-height: 110px; }
+  .skill-tags { display: flex; justify-content: center; gap: 8px; margin-bottom: 20px; }
+  .skill-tags span { width: 46px; height: 26px; border-radius: 6px; }
+  .portfolio-btn { display: inline-block; padding: 9px 26px; border-radius: 24px; font-weight: 700; font-size: 0.85rem; border: 1.5px solid; background: #fff; }
+
+  /* per-member accent colors */
+  .c-blue { border-color: #2563eb; } .bg-blue { background: #2563eb; } .bio-blue { background: #e7effe; } .btn-c-blue { color: #2563eb; border-color: #2563eb; }
+  .c-pink { border-color: #e0439a; } .bg-pink { background: #e0439a; } .bio-pink { background: #fdeaf3; } .btn-c-pink { color: #e0439a; border-color: #e0439a; }
+  .c-green { border-color: #17a673; } .bg-green { background: #17a673; } .bio-green { background: #e3f9ef; } .btn-c-green { color: #17a673; border-color: #17a673; }
+  .c-purple { border-color: #7c4fe0; } .bg-purple { background: #7c4fe0; } .bio-purple { background: #f1ecfd; } .btn-c-purple { color: #7c4fe0; border-color: #7c4fe0; }
+  .c-orange { border-color: #d1791f; } .bg-orange { background: #d1791f; } .bio-orange { background: #fdf1e0; } .btn-c-orange { color: #d1791f; border-color: #d1791f; }
+  .c-teal { border-color: #16b3a3; } .bg-teal { background: #16b3a3; } .bio-teal { background: #e3f9f7; } .btn-c-teal { color: #16b3a3; border-color: #16b3a3; }
+
+  .together-section { text-align: center; }
+  .together-section h2 { font-size: 2rem; margin-bottom: 16px; }
+  .together-section p { color: #5b6478; margin-bottom: 30px; }
+</style>
+</head>
+<body>
+
+<nav class="navbar dark">
+  <div class="nav-inner">
+    <div class="nav-brand"><div class="nav-logo">U</div>Ubwenge Lab</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="impact.html">Impact</a></li>
+      <li><a href="team.html" class="active">Team</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+  </div>
+</nav>
+
+<header class="team-hero">
+  <div class="container" style="display:flex;flex-direction:column;align-items:center;">
+    <div class="eyebrow2">Meet The Innovators</div>
+    <h1>The Minds Behind Ubwenge Lab</h1>
+    <div class="stat-strip">
+      <div class="box"><div class="big">8</div><div class="lbl">Team Members</div></div>
+      <div class="box"><div class="big">100%</div><div class="lbl">Dedicated</div></div>
+      <div class="box"><div class="big">∞</div><div class="lbl">Innovation</div></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="team-grid">
+
+      <div class="member-card">
+        <div class="member-avatar-wrap">
+          <div class="member-avatar c-blue"></div>
+          <span class="role-tag bg-blue">Ceo & co founder</span>
+        </div>
+        <div class="member-name">Daniel Gakumba Ntwali</div>
+        <div class="member-title" style="color:#2563eb;">Chief Executive Officer</div>
+        <div class="member-bio bio-blue">Visionary Leader with expertise in AI and Software development. Passionate about leveraging technology to improve healthcare outcomes across Africa.</div>
+        <div class="skill-tags"><span class="bio-blue" style="opacity:.6;"></span><span class="bio-blue" style="opacity:.6;"></span><span class="bio-blue" style="opacity:.6;"></span></div>
+        <a href="#" class="portfolio-btn btn-c-blue">View Portfolio</a>
+      </div>
+
+      <div class="member-card">
+        <div class="member-avatar-wrap">
+          <div class="member-avatar c-pink"></div>
+          <span class="role-tag bg-pink">COO</span>
+        </div>
+        <div class="member-name">Bwiza Annie Pierre</div>
+        <div class="member-title" style="color:#e0439a;">Chief Operating Officer</div>
+        <div class="member-bio bio-pink">Operations leader and Creative director. Manages day-to-day operations and ensures strategic initiatives are executed effectively.</div>
+        <div class="skill-tags"><span class="bio-pink" style="opacity:.6;"></span><span class="bio-pink" style="opacity:.6;"></span><span class="bio-pink" style="opacity:.6;"></span></div>
+        <a href="#" class="portfolio-btn btn-c-pink">View Portfolio</a>
+      </div>
+
+      <div class="member-card">
+        <div class="member-avatar-wrap">
+          <div class="member-avatar c-green"></div>
+          <span class="role-tag bg-green">CFO</span>
+        </div>
+        <div class="member-name">Samantha Umuhire Ineza</div>
+        <div class="member-title" style="color:#17a673;">Chief Financial Officer</div>
+        <div class="member-bio bio-green">Strategic financial leader managing growth and operations. Expert in building sustainable business models for healthcare innovation.</div>
+        <div class="skill-tags"><span class="bio-green" style="opacity:.6;"></span><span class="bio-green" style="opacity:.6;"></span><span class="bio-green" style="opacity:.6;"></span></div>
+        <a href="#" class="portfolio-btn btn-c-green">View Portfolio</a>
+      </div>
+
+      <div class="member-card">
+        <div class="member-avatar-wrap">
+          <div class="member-avatar c-purple"></div>
+          <span class="role-tag bg-purple">CTO</span>
+        </div>
+        <div class="member-name">Butera Teta Nelly</div>
+        <div class="member-title" style="color:#7c4fe0;">Chief Technology Officer</div>
+        <div class="member-bio bio-purple">Full-stack developer and tech lead building scalable, secure healthcare systems. Expert in modern web technologies and cloud architecture.</div>
+        <div class="skill-tags"><span class="bio-purple" style="opacity:.6;"></span><span class="bio-purple" style="opacity:.6;"></span><span class="bio-purple" style="opacity:.6;"></span></div>
+        <a href="#" class="portfolio-btn btn-c-purple">View Portfolio</a>
+      </div>
+
+      <div class="member-card">
+        <div class="member-avatar-wrap">
+          <div class="member-avatar c-orange"></div>
+          <span class="role-tag bg-orange">CPO</span>
+        </div>
+        <div class="member-name">Robert Mitali Tony Niyonkuru</div>
+        <div class="member-title" style="color:#d1791f;">Chief Product Officer & HR</div>
+        <div class="member-bio bio-orange">HR strategist and product operations leader. Builds team culture and ensures everyone at Ubwenge Lab thrives.</div>
+        <div class="skill-tags"><span class="bio-orange" style="opacity:.6;"></span><span class="bio-orange" style="opacity:.6;"></span><span class="bio-orange" style="opacity:.6;"></span></div>
+        <a href="#" class="portfolio-btn btn-c-orange">View Portfolio</a>
+      </div>
+
+      <div class="member-card">
+        <div class="member-avatar-wrap">
+          <div class="member-avatar c-teal"></div>
+          <span class="role-tag bg-teal">Developer</span>
+        </div>
+        <div class="member-name">Terance Bana Cyuzuzo</div>
+        <div class="member-title" style="color:#16b3a3;">Software Engineer</div>
+        <div class="member-bio bio-teal">Software engineer and penetration tester passionate about developing security first platforms and user-centric solutions.</div>
+        <div class="skill-tags"><span class="bio-teal" style="opacity:.6;"></span><span class="bio-teal" style="opacity:.6;"></span><span class="bio-teal" style="opacity:.6;"></span></div>
+        <a href="#" class="portfolio-btn btn-c-teal">View Portfolio</a>
+      </div>
+
+      <div class="member-card">
+        <div class="member-avatar-wrap">
+          <div class="member-avatar c-purple"></div>
+          <span class="role-tag bg-purple">Developer</span>
+        </div>
+        <div class="member-name">Lisa Ineza</div>
+        <div class="member-title" style="color:#7c4fe0;">Software Engineer</div>
+        <div class="member-bio bio-purple">Software engineer contributing to the development and optimization of E-vuze's healthcare solutions.</div>
+        <div class="skill-tags"><span class="bio-purple" style="opacity:.6;"></span><span class="bio-purple" style="opacity:.6;"></span><span class="bio-purple" style="opacity:.6;"></span></div>
+        <a href="#" class="portfolio-btn btn-c-purple">View Portfolio</a>
+      </div>
+
+      <div class="member-card">
+        <div class="member-avatar-wrap">
+          <div class="member-avatar c-orange"></div>
+          <span class="role-tag bg-orange">Business Dev</span>
+        </div>
+        <div class="member-name">Gwiza Elicia</div>
+        <div class="member-title" style="color:#d1791f;">Business Development</div>
+        <div class="member-bio bio-orange">Business Development specialist driving partnerships and growth strategies for Ubwenge Lab's expansion.</div>
+        <div class="skill-tags"><span class="bio-orange" style="opacity:.6;"></span><span class="bio-orange" style="opacity:.6;"></span><span class="bio-orange" style="opacity:.6;"></span></div>
+        <a href="#" class="portfolio-btn btn-c-orange">View Portfolio</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="together-section">
+  <div class="container">
+    <h2>Together We Build, Together We Heal</h2>
+    <p>At Ubwenge Lab, innovation is our promise to the landscape of Rwanda.<br>Driven by passion and informed by expertise, we create the technology that cares</p>
+    <a href="contact.html" class="btn btn-primary" style="background:linear-gradient(90deg,#16b3a3,#2563eb);">Become an innovator</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-brand">📈 Ubwenge Lab</div>
+      <p>Building intelligent healthcare infrastructure for Africa</p>
+      <p>We design platforms that transform healthcare delivery, reduce wait times, and integrate AI to guide decisions.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Our Location</h4>
+      <p>Kigali, Rwanda<br>East Africa</p>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <p>Email: info@ubwengelab.rw</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Ubwenge Lab Ltd. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

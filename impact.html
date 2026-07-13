@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impact — Ubwenge Lab</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .impact-hero {
+    min-height: 420px;
+    display: flex; align-items: center;
+    background: linear-gradient(180deg, rgba(6,12,26,.55), rgba(6,12,26,.7)), url('images/impact-hero.png') center/cover no-repeat;
+    color: #fff;
+  }
+  .impact-hero .eyebrow-badge { display:inline-block; background: rgba(37,99,235,.25); color:#8fb6ff; font-size:.78rem; font-weight:700; letter-spacing:1px; padding:7px 16px; border-radius:20px; margin-bottom:20px;}
+  .impact-hero h1 { color:#fff; font-size: 2.6rem; max-width: 700px; margin-bottom: 18px; }
+  .impact-hero h1 em { color: #4d8dff; font-style: italic; font-family: Georgia, serif; }
+  .impact-hero p { color: #cfd6e6; max-width: 600px; }
+
+  .northstar { display: grid; grid-template-columns: 1.3fr 1fr; gap: 50px; align-items: center; }
+  .northstar h2 { font-size: 2rem; margin-bottom: 18px; }
+  .northstar p { color: #5b6478; }
+  .quote-box {
+    background: #0a0f1e; color: #fff; border-radius: 16px; padding: 34px;
+  }
+  .quote-box p { color: #cfd6e6; font-size: 1.1rem; font-weight: 500; }
+  .quote-box .text-blue { color: #4d8dff; }
+
+  .areas-section { background: #f3f5f9; }
+  .areas-grid { display: grid; grid-template-columns: repeat(3,1fr); background: #fff; border: 1px solid #e2e6ef; border-radius: 14px; margin-top: 40px; overflow: hidden; }
+  .area-card { padding: 30px; border-right: 1px solid #e2e6ef; border-bottom: 1px solid #e2e6ef; }
+  .area-card:nth-child(3n) { border-right: none; }
+  .area-card:nth-child(4), .area-card:nth-child(5), .area-card:nth-child(6) { border-bottom: none; }
+  .area-icon { width: 40px; height: 40px; border-radius: 10px; background: #e7effe; color: #2563eb; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+  .area-card h3 { font-size: 1.05rem; margin-bottom: 10px; }
+  .area-card p { color: #5b6478; font-size: 0.92rem; }
+
+  .numbers-section { background: #0a0f1e; color: #fff; }
+  .numbers-section h2 { color: #fff; font-size: 2rem; }
+  .numbers-section .sub { color: #9aa3b8; margin-bottom: 40px; }
+  .stat-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
+  .stat-box { background: #121a2e; border-radius: 14px; padding: 30px; text-align: center; }
+  .stat-box .num { font-size: 2.2rem; font-weight: 800; color: #4d8dff; margin-bottom: 8px; }
+  .stat-box .label { color: #9aa3b8; font-size: 0.88rem; }
+
+  .roadmap2 { display: grid; grid-template-columns: 1.4fr 1fr; gap: 50px; margin-top: 40px; }
+  .rm-item { display: flex; gap: 20px; padding-bottom: 30px; }
+  .rm-dot { width: 14px; height: 14px; border-radius: 50%; background: #2563eb; margin-top: 6px; flex-shrink: 0; }
+  .rm-item .phase { color: #2563eb; font-weight: 700; font-size: 0.78rem; letter-spacing: 1px; margin-bottom: 6px; }
+  .rm-item h4 { font-size: 1.1rem; margin-bottom: 8px; }
+  .rm-item p { color: #5b6478; font-size: 0.92rem; }
+  .patient-reach-card { background: #f7f9fc; border: 1px solid #e2e6ef; border-radius: 14px; padding: 30px; height: fit-content; }
+  .bar-chart { display: flex; align-items: flex-end; gap: 16px; height: 180px; margin: 30px 0 10px; }
+  .bar { flex:1; background: #b9cdfb; border-radius: 6px 6px 0 0; text-align: center; position: relative; display: flex; align-items: flex-end; justify-content: center;}
+  .bar span { position: absolute; top: -22px; font-size: 0.8rem; font-weight: 700; color: #12203f; }
+  .bar-labels { display: flex; gap: 16px; }
+  .bar-labels span { flex: 1; text-align: center; font-size: 0.8rem; color: #5b6478; }
+  .patient-reach-card small { color: #8b93a6; }
+
+  .stakeholders-section { background: #0a0f1e; color: #fff; }
+  .stakeholders-section h2 { color: #fff; font-size: 2rem; }
+  .stakeholders-section .sub { color: #9aa3b8; max-width: 700px; margin-bottom: 40px; }
+  .stake-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+  .stake-card { background: #121a2e; border-radius: 14px; padding: 30px; }
+  .stake-card h3 { color: #fff; font-size: 1.05rem; margin-bottom: 18px; }
+  .stake-card li { color: #b7bfd1; font-size: 0.9rem; margin-bottom: 12px; padding-left: 16px; position: relative; }
+  .stake-card li::before { content: "•"; position: absolute; left: 0; color: #4d8dff; }
+
+  .impact-cta { background: linear-gradient(180deg,#eef2f8,#dbe6ff); text-align: center; }
+  .impact-cta h2 { font-size: 2.1rem; margin-bottom: 16px; }
+  .impact-cta p { color: #5b6478; max-width: 650px; margin: 0 auto 30px; }
+</style>
+</head>
+<body>
+
+<nav class="navbar dark">
+  <div class="nav-inner">
+    <div class="nav-brand"><div class="nav-logo">U</div>Ubwenge Lab</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="impact.html" class="active">Impact</a></li>
+      <li><a href="team.html">Team</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+  </div>
+</nav>
+
+<header class="impact-hero">
+  <div class="container">
+    <span class="eyebrow-badge">OUR IMPACT & VISION</span>
+    <h1>Transforming healthcare delivery <em>across Africa</em></h1>
+    <p>We measure success not by downloads or revenue, but by the number of people whose healthcare experience we improve</p>
+  </div>
+</header>
+
+<section>
+  <div class="container northstar">
+    <div>
+      <div class="eyebrow">WHY IT MATTERS</div>
+      <h2>Impact is our <span class="text-blue">north star</span></h2>
+      <p>At Ubwenge Lab, we measure success not by downloads or revenue, but by the number of people whose healthcare experience we improve. Every feature we build is designed to create measurable, meaningful impact — reaching the patients, pharmacies, and providers who need it most</p>
+    </div>
+    <div class="quote-box">
+      <p>"Every feature we build is designed to create <span class="text-blue">measurable, meaningful impact</span> on people's lives."</p>
+    </div>
+  </div>
+</section>
+
+<section class="areas-section">
+  <div class="container">
+    <div class="eyebrow">AREAS OF IMPACT</div>
+    <h2 class="section-title">Six dimensions of <span class="text-blue">change</span></h2>
+    <div class="areas-grid">
+      <div class="area-card"><div class="area-icon">✓</div><h3>Healthcare Access</h3><p>We make quality healthcare accessible to everyone. Connecting rural and urban communities to vital services through intelligent digital infrastructure.</p></div>
+      <div class="area-card"><div class="area-icon">⏱</div><h3>Time Savings</h3><p>We reduce hours spent searching for care and navigating the system. Saving time boosts productivity and reduces patient stress significantly.</p></div>
+      <div class="area-card"><div class="area-icon">$</div><h3>Cost Reduction</h3><p>We help patients avoid unnecessary travel costs. Making healthcare affordable and transparent for everyone, regardless of location or income.</p></div>
+      <div class="area-card"><div class="area-icon">🏥</div><h3>Hospital Efficiency</h3><p>We reduce congestion by routing non-urgent cases to pharmacies. This allows hospitals to focus resources on critical patients who truly need them.</p></div>
+      <div class="area-card"><div class="area-icon">📊</div><h3>Data-Driven Healthcare</h3><p>We provide actionable insights into trends and service gaps. Innovative data empowers providers to make better-informed, faster decisions.</p></div>
+      <div class="area-card"><div class="area-icon">🌐</div><h3>Digital Inclusion</h3><p>Our tech works in low-bandwidth areas and supports multiple languages, ensuring access for users of all literacy levels across Rwanda and beyond.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="numbers-section">
+  <div class="container">
+    <div class="eyebrow" style="color:#8fb6ff;">PROJECTED IMPACT — YEAR 1</div>
+    <h2>Numbers that <span class="text-blue">drive</span> us forward</h2>
+    <p class="sub">Based on our launch projections for the E-Vuze platform across Rwanda</p>
+    <div class="stat-grid">
+      <div class="stat-box"><div class="num">10K+</div><div class="label">Patients served through pharmacy system</div></div>
+      <div class="stat-box"><div class="num">50+</div><div class="label">Pharmacies connected to the platform</div></div>
+      <div class="stat-box"><div class="num">30%</div><div class="label">Reduction in time spent finding medicine</div></div>
+      <div class="stat-box"><div class="num">20%</div><div class="label">Decrease in unnecessary hospital visits</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="eyebrow">LONG-TERM STRATEGIC VISION</div>
+    <h2 class="section-title">Our roadmap to <span class="text-blue">continental impact</span></h2>
+    <div class="roadmap2">
+      <div>
+        <div class="rm-item">
+          <div class="rm-dot"></div>
+          <div><div class="phase">2026 — FOUNDATION PHASE</div><h4>Launch & Establish</h4><p>Launch E-Vuze pharmacy system in Rwanda. 50+ pharmacies onboarded. Initial data gathering and platform refinement based on real-world feedback</p></div>
+        </div>
+        <div class="rm-item">
+          <div class="rm-dot"></div>
+          <div><div class="phase">2027-2028 — EXPANSION PHASE</div><h4>Scale Within Rwanda</h4><p>Roll out hospital and AI triage modules. Expand to additional cities across Rwanda. Reaching 500K+ patients with intelligent, connected healthcare services</p></div>
+        </div>
+        <div class="rm-item">
+          <div class="rm-dot"></div>
+          <div><div class="phase">2029-2030 — REGIONAL GROWTH</div><h4>East Africa Expansion</h4><p>Expand E-Vuze to neighbouring East Africa countries. Launch telemedicine integration and cross-border data sharing for regional healthcare intelligence</p></div>
+        </div>
+        <div class="rm-item">
+          <div class="rm-dot"></div>
+          <div><div class="phase">2032+ — CONTINENTAL IMPACT</div><h4>Africa-Wide Platform</h4><p>Become the leading healthcare infrastructure platform across Africa, serving millions and setting the standard for intelligent, accessible healthcare delivery</p></div>
+        </div>
+      </div>
+      <div class="patient-reach-card">
+        <div class="eyebrow" style="margin-bottom:4px;">PROJECTED PATIENT REACH</div>
+        <h4>Patients served by year</h4>
+        <div class="bar-chart">
+          <div class="bar" style="height:8%;"><span>7k</span></div>
+          <div class="bar" style="height:16%;"><span>100k</span></div>
+          <div class="bar" style="height:55%;background:#6f97f5;"><span>500k</span></div>
+          <div class="bar" style="height:85%;background:#2563eb;"><span>2M+</span></div>
+          <div class="bar" style="height:100%;background:#0a0f1e;"><span style="color:#fff;">8M+</span></div>
+        </div>
+        <div class="bar-labels"><span>2026</span><span>2027</span><span>2028</span><span>2030</span><span>2032</span></div>
+        <small>Projections based on staged rollout across Rwanda and East Africa.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stakeholders-section">
+  <div class="container">
+    <div class="eyebrow" style="color:#8fb6ff;">IMPACT ON STAKEHOLDERS</div>
+    <h2>Who <span class="text-blue">benefits</span> and how</h2>
+    <p class="sub">Our platform creates value across the entire healthcare ecosystem — patients, pharmacies, and providers all experience measurable improvements</p>
+    <div class="stake-grid">
+      <div class="stake-card">
+        <h3>For Patients</h3>
+        <ul>
+          <li>Faster access to needed medications</li>
+          <li>Reduced healthcare costs through price transparency</li>
+          <li>Less time wasted in hospitals for non-urgent issues</li>
+          <li>Better healthcare decisions through AI guidance</li>
+          <li>Improved health outcomes through timely care</li>
+        </ul>
+      </div>
+      <div class="stake-card">
+        <h3>For Pharmacies</h3>
+        <ul>
+          <li>Increased customer reach and visibility</li>
+          <li>More efficient inventory management</li>
+          <li>Reduced time answering stock inquiries</li>
+          <li>Growing customer base through platform</li>
+          <li>Digital transformation support</li>
+        </ul>
+      </div>
+      <div class="stake-card">
+        <h3>For Healthcare Providers</h3>
+        <ul>
+          <li>Reduced congestion in hospitals and clinics</li>
+          <li>Better resource allocation and planning</li>
+          <li>Improved patient satisfaction scores</li>
+          <li>Data insights for service improvement</li>
+          <li>More efficient operations overall</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="impact-cta">
+  <div class="container">
+    <h2>Be part of the <span class="text-blue">impact</span></h2>
+    <p>Partner with us to build the future of healthcare infrastructure in Africa. Whether you're an NGO, government agency, healthcare provider, or investor, let's work together.</p>
+    <a href="contact.html" class="btn btn-primary">Get In Touch →</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-brand">📈 Ubwenge Lab</div>
+      <p>Building intelligent healthcare infrastructure for Africa</p>
+      <p>We design platforms that transform healthcare delivery, reduce wait times, and integrate AI to guide decisions.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="impact.html">Impact</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li>✉ info@ubwengelab.rw</li>
+        <li>📍 Kigali, Rwanda</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Ubwenge Lab Ltd. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

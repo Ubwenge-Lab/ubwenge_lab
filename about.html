@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Ubwenge Lab</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .about-hero {
+    background: linear-gradient(180deg, rgba(6,12,26,.4), rgba(6,12,26,.65)), url('images/about-hero.png') center/cover no-repeat, #0a0f1e;
+    color: #fff;
+    padding: 80px 0 70px;
+  }
+  .about-hero .eyebrow-badge {
+    display: inline-block;
+    background: rgba(37,99,235,.25);
+    color: #8fb6ff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 7px 16px;
+    border-radius: 20px;
+    margin-bottom: 22px;
+  }
+  .about-hero h1 { color: #fff; font-size: 2.8rem; max-width: 700px; line-height: 1.2; margin-bottom: 22px;}
+  .about-hero h1 em { color: #4d8dff; font-style: italic; font-family: Georgia, serif; }
+  .about-hero p { color: #b7bfd1; max-width: 620px; font-size: 1.05rem; }
+
+  .who-we-are { background: #eef2f8; }
+  .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .who-grid h2 { font-size: 2rem; margin-bottom: 20px; }
+  .who-grid p { color: #5b6478; margin-bottom: 16px; }
+  .philosophy-box {
+    background: linear-gradient(135deg,#0a1128,#101c3b);
+    border-radius: 16px;
+    padding: 40px;
+    color: #fff;
+    min-height: 220px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .philosophy-box .tag { color: #8fb6ff; font-size: 0.78rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 14px; }
+  .philosophy-box p { font-size: 1.3rem; font-weight: 600; line-height: 1.4; }
+
+  .pillars-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 40px; margin-top: 40px; }
+  .pillar .num { color: #2563eb; font-weight: 700; font-size: 0.85rem; margin-bottom: 12px; }
+  .pillar h3 { font-size: 1.2rem; margin-bottom: 12px; }
+  .pillar p { color: #5b6478; font-size: 0.95rem; }
+
+  .values-section { background: #eef2f8; }
+  .values-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 0; border: 1px solid #e2e6ef; border-radius: 14px; overflow: hidden; background: #fff; margin-top: 40px; }
+  .value-card { padding: 34px; border-right: 1px solid #e2e6ef; border-bottom: 1px solid #e2e6ef; }
+  .value-card:nth-child(2n) { border-right: none; }
+  .value-card:nth-child(3), .value-card:nth-child(4) { border-bottom: none; }
+  .value-icon { width: 44px; height: 44px; border-radius: 10px; background: #e7effe; color: #2563eb; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+  .value-card h3 { font-size: 1.1rem; margin-bottom: 10px; }
+  .value-card p { color: #5b6478; font-size: 0.94rem; }
+
+  .barriers-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; margin-top: 40px; }
+  .barrier-item { padding: 20px 0; border-top: 1px solid #e2e6ef; display: grid; grid-template-columns: 180px 1fr; gap: 20px; }
+  .barrier-item h4 { font-size: 1rem; }
+  .barrier-item p { color: #5b6478; font-size: 0.94rem; }
+
+  .founder-section { background: #eef2f8; }
+  .founder-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 50px; align-items: center; }
+  .founder-photo { background: #12151c; border-radius: 14px; min-height: 380px; }
+  .quote-block { border-left: 3px solid #2563eb; padding-left: 20px; margin-bottom: 20px; }
+  .quote-block p { font-style: italic; color: #263049; font-size: 1.05rem; }
+  .founder-name { font-weight: 700; margin-top: 20px; }
+  .founder-role { color: #5b6478; font-size: 0.9rem; }
+  .quote-mark { display: inline-flex; width: 40px; height: 40px; background: #2563eb; color: #fff; border-radius: 8px; align-items: center; justify-content: center; font-size: 1.4rem; margin-top: -60px; margin-left: 20px; }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <div class="nav-brand"><div class="nav-logo">U</div>Ubwenge Lab</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="impact.html">Impact</a></li>
+      <li><a href="team.html">Team</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+  </div>
+</nav>
+
+<header class="about-hero">
+  <div class="container">
+    <span class="eyebrow-badge">ABOUT UBWENGE LAB</span>
+    <h1>A lab built for <em>smarter</em> healthcare in Africa</h1>
+    <p>A technology company focused on creating scalable, AI-powered platforms that transform how healthcare services are delivered across Rwanda and Africa</p>
+  </div>
+</header>
+
+<section class="who-we-are">
+  <div class="container who-grid">
+    <div>
+      <div class="eyebrow">WHO WE ARE</div>
+      <h2>Technology with <span class="text-blue">systemic</span> mindset</h2>
+      <p>Ubwenge Lab is a technology company focused on creating scalable, AI powered platforms that drive real-world impact in healthcare. We don't just create applications — we design complete digital infrastructure that transforms how healthcare services are delivered</p>
+      <p>Founded in Rwanda, we understand the unique challenges facing Africa healthcare systems. Our solutions are built to work in real-world conditions addressing issues like limited healthcare access, geographical barriers, and fragmented delivery</p>
+    </div>
+    <div class="philosophy-box">
+      <div class="tag">OUR PHILOSOPHY</div>
+      <p>"We build systems for scale, sustainability, and real-world impact."</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="eyebrow">OUR PILLARS</div>
+    <h2 class="section-title">Mission, Vision & Approach</h2>
+    <div class="pillars-grid">
+      <div class="pillar">
+        <div class="num">01 — Mission</div>
+        <h3>Advance Healthcare Access</h3>
+        <p>To advance healthcare access through innovative technology that connects patients, healthcare providers, and pharmacies into one intelligent ecosystem</p>
+      </div>
+      <div class="pillar">
+        <div class="num">02 — Vision</div>
+        <h3>Healthcare for Every African</h3>
+        <p>A future where every person in Africa has seamless access to quality healthcare services through intelligent, connected digital infrastructure.</p>
+      </div>
+      <div class="pillar">
+        <div class="num">03 — Approach</div>
+        <h3>Long-term Platforms, Not Patches</h3>
+        <p>We build long-term platforms, not short-term solutions. Every system we create is designed for sustainability, scalability, and meaningful impact on people's lives.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="values-section">
+  <div class="container">
+    <div class="eyebrow">OUR VALUES</div>
+    <h2 class="section-title">What <span class="text-blue">drives</span> us</h2>
+    <p class="section-sub">Every decision, every feature, every line of code is shaped by these four principles.</p>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">★</div>
+        <h3>Impact-Driven</h3>
+        <p>Every decision is guided by the question: "Does this improve a patient's life?" We measure success in real-world outcomes, not features shipped.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">💡</div>
+        <h3>Innovation</h3>
+        <p>We embrace cutting-edge technology, but only when it solves real problems. AI, automation, and intelligent systems are tools — patients' wellbeing is the goal.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">👥</div>
+        <h3>Collaboration</h3>
+        <p>We work closely with healthcare providers, patients, and stakeholders to co-create solutions that truly reflect the needs of the communities we serve.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🌱</div>
+        <h3>Sustainability</h3>
+        <p>We build systems designed to last and scale — creating long-term value for communities rather than short-lived interventions that fade when funding does.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="eyebrow">WHY HEALTHCARE</div>
+    <h2 class="section-title">The barriers we're <span class="text-blue">breaking</span></h2>
+    <div class="barriers-grid">
+      <p style="color:#5b6478;">Healthcare is fundamental to human wellbeing, yet millions across Africa face barriers to accessing quality care. These aren't abstract statistics — they're the daily reality that drives everything we build.</p>
+      <div>
+        <div class="barrier-item"><h4>Long wait times</h4><p>Patients often wait hours — sometimes days — for appointments and consultations, leading to delayed treatment and worsened health outcomes.</p></div>
+        <div class="barrier-item"><h4>Fragmented systems</h4><p>Hospitals, pharmacies, and clinics operate in silos, creating massive inefficiencies and making care navigation unnecessarily complex.</p></div>
+        <div class="barrier-item"><h4>Medicine access</h4><p>Finding consistent medication availability requires visiting multiple pharmacies, wasting valuable time and transportation costs for patients.</p></div>
+        <div class="barrier-item"><h4>Information gaps</h4><p>Patients lack guidance on when they need hospital care versus pharmacy support, leading to unnecessary emergency visits or untreated conditions.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="founder-section">
+  <div class="container founder-grid">
+    <div class="founder-photo"></div>
+    <div>
+      <div class="eyebrow">FROM OUR FOUNDER</div>
+      <div class="quote-block">
+        <p>"I founded Ubwenge Lab because I saw firsthand how technology could transform lives, but I also saw how most tech solutions don't address the real challenges people face daily."</p>
+      </div>
+      <div class="quote-block">
+        <p>"We're building systems that work for African contexts — systems that are intelligent, reliable, and designed to scale. E-Vuze is just the beginning of what we believe is possible when technology truly serves people's needs."</p>
+      </div>
+      <div class="founder-name">Daniel Gakumba Ntwali</div>
+      <div class="founder-role">Founder & CEO, Ubwenge Lab Ltd</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-brand">📈 Ubwenge Lab</div>
+      <p>Building intelligent healthcare infrastructure for Africa</p>
+      <p>We design platforms that transform healthcare delivery, reduce wait times, and integrate AI to guide decisions.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="impact.html">Impact</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li>✉ info@ubwengelab.rw</li>
+        <li>📍 Kigali, Rwanda</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Ubwenge Lab Ltd. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

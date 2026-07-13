@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Ubwenge Lab</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .projects-hero {
+    position: relative;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(6,12,26,.55), rgba(6,12,26,.72)), url('images/projects-hero.png') center/cover no-repeat;
+    color: #fff;
+  }
+  .projects-hero .eyebrow-badge {
+    display: inline-block;
+    background: rgba(37,99,235,.25);
+    color: #8fb6ff;
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 1px;
+    padding: 7px 16px; border-radius: 20px; margin-bottom: 20px;
+  }
+  .projects-hero h1 { color: #fff; font-size: 2.8rem; margin-bottom: 18px; }
+  .projects-hero p { color: #cfd6e6; max-width: 640px; margin: 0 auto; font-size: 1.05rem; }
+
+  .platforms-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.08);
+    padding: 44px;
+    display: flex;
+    gap: 26px;
+    align-items: flex-start;
+    margin-top: -60px;
+    position: relative;
+    z-index: 2;
+  }
+  .platforms-card .icon { width: 52px; height: 52px; border-radius: 12px; background: #e7effe; color: #2563eb; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+  .platforms-card h3 { font-size: 1.3rem; margin-bottom: 12px; }
+  .platforms-card p { color: #5b6478; }
+
+  .flagship-header { text-align: center; margin-top: 80px; }
+  .flagship-tag {
+    display: inline-block;
+    background: linear-gradient(90deg,#16b3a3,#2563eb);
+    color: #fff; font-weight: 700; font-size: 0.78rem; letter-spacing: 1px;
+    padding: 7px 20px; border-radius: 20px; margin-bottom: 24px;
+  }
+  .flagship-header h2 { font-size: 2.3rem; display: flex; align-items: center; justify-content: center; gap: 14px; }
+  .evuze-icon { width: 50px; height: 50px; border-radius: 12px; background: #fff; border: 1px solid #e2e6ef; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: #16b3a3; }
+  .flagship-header .sub { color: #2563eb; font-weight: 600; margin-top: 10px; }
+
+  .problem-solution { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 50px; }
+  .ps-card { border-radius: 14px; padding: 34px; }
+  .ps-card.problem { background: #fff; border: 1px solid #e2e6ef; }
+  .ps-card.solution { background: #eaf1ff; }
+  .ps-card h3 { margin-bottom: 14px; font-size: 1.15rem; }
+  .ps-card.problem h3 { color: #dc4c4c; }
+  .ps-card.solution h3 { color: #2563eb; }
+  .ps-card p { color: #444d63; }
+
+  .components-title { text-align: center; margin: 60px 0 30px; font-size: 1.3rem; font-weight: 700; }
+  .component-card { background: #fff; border: 1px solid #e2e6ef; border-radius: 14px; padding: 30px; }
+  .component-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+  .comp-status { font-size: 0.72rem; font-weight: 700; padding: 5px 12px; border-radius: 20px; }
+  .comp-status.dev { background: #e3f9ef; color: #17a673; }
+  .comp-status.phase2 { background: #fdf1e0; color: #d18b1f; }
+  .comp-status.phase3 { background: #fdf1e0; color: #d18b1f; }
+  .component-card h3 { margin-bottom: 12px; }
+  .component-card p { color: #5b6478; font-size: 0.94rem; margin-bottom: 16px; }
+  .component-card .launch { font-weight: 700; font-size: 0.9rem; margin-bottom: 10px; }
+  .learn-more { color: #2563eb; font-weight: 600; font-size: 0.9rem; }
+
+  .roadmap-section { background: #0a0f1e; color: #fff; text-align: center; }
+  .roadmap-section h2 { color: #fff; font-size: 2rem; margin-bottom: 14px; }
+  .roadmap-section p.sub { color: #9aa3b8; max-width: 600px; margin: 0 auto 50px; }
+  .roadmap-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 30px; text-align: left; }
+  .roadmap-grid h4 { color: #fff; margin-bottom: 12px; font-size: 1.05rem; }
+  .roadmap-grid p { color: #9aa3b8; font-size: 0.9rem; }
+
+  .collab-band {
+    background: linear-gradient(120deg,#16b3a3,#2563eb);
+    border-radius: 20px;
+    padding: 50px 60px;
+    color: #fff;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .collab-band h2 { color: #fff; font-size: 1.8rem; margin-bottom: 10px; }
+  .collab-band p { color: #eaf6f4; max-width: 480px; }
+</style>
+</head>
+<body>
+
+<nav class="navbar dark">
+  <div class="nav-inner">
+    <div class="nav-brand"><div class="nav-logo">U</div>Ubwenge Lab</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="impact.html">Impact</a></li>
+      <li><a href="team.html">Team</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+  </div>
+</nav>
+
+<header class="projects-hero">
+  <div class="container">
+    <span class="eyebrow-badge">OUR WORK</span>
+    <h1>Our Projects</h1>
+    <p>Building long-term platforms that transform healthcare delivery. We build platforms, not products.</p>
+  </div>
+</header>
+
+<div class="container">
+  <div class="platforms-card">
+    <div class="icon">📦</div>
+    <div>
+      <h3>We Build Platforms, Not Products</h3>
+      <p>At Ubwenge Lab, we don't create one-off applications. We design comprehensive platforms that address systemic healthcare challenges. Each project is built with scalability, sustainability, and real-world impact in mind. Our current focus is on healthcare infrastructure, starting with E-Vuze—a platform that connects the entire healthcare ecosystem.</p>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="flagship-header">
+      <span class="flagship-tag">FLAGSHIP PROJECT</span>
+      <h2><span class="evuze-icon">✚</span> E-Vuze Healthcare Platform</h2>
+      <p class="sub">AI-Powered Healthcare One-Stop Center for Rwanda and Beyond</p>
+    </div>
+
+    <div class="problem-solution">
+      <div class="ps-card problem">
+        <h3>The Problem We're Solving</h3>
+        <p>Healthcare in many African countries is fragmented. Patients struggle to find available medications, hospitals are overwhelmed with non-urgent cases, and there's no intelligent system to guide people toward the right level of care.</p>
+      </div>
+      <div class="ps-card solution">
+        <h3>Our Solution</h3>
+        <p>E-Vuze creates a unified digital ecosystem where patients find pharmacies instantly, hospitals manage flow efficiently, and AI triage guides care correctly, saving time and improving outcomes.</p>
+      </div>
+    </div>
+
+    <h3 class="components-title">Platform Components</h3>
+    <div class="grid-3">
+      <div class="component-card">
+        <div class="component-top"><span></span><span class="comp-status dev">In Development</span></div>
+        <h3>Pharmacy System</h3>
+        <p>The foundation of E-Vuze, enabling real-time medicine availability, price comparison, and prescription matching.</p>
+        <div class="launch">Launch: Feb 15, 2026</div>
+        <a href="#" class="learn-more">Learn more →</a>
+      </div>
+      <div class="component-card">
+        <div class="component-top"><span></span><span class="comp-status phase2">Phase 2</span></div>
+        <h3>Hospital System</h3>
+        <p>Streamlines appointment booking, doctor availability, and patient flow management.</p>
+        <br>
+        <a href="#" class="learn-more">Learn more →</a>
+      </div>
+      <div class="component-card">
+        <div class="component-top"><span></span><span class="comp-status phase3">Phase 3</span></div>
+        <h3>AI Triage System</h3>
+        <p>Intelligent guidance helping patients determine the right level of care needed.</p>
+        <br>
+        <a href="#" class="learn-more">Learn more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="roadmap-section">
+  <div class="container">
+    <h2>Future Roadmap</h2>
+    <p class="sub">E-Vuze is the first of many healthcare infrastructure platforms we're building.</p>
+    <div class="roadmap-grid">
+      <div>
+        <h4>Healthcare Data Analytics</h4>
+        <p>Tools for healthcare providers to understand patient trends, medicine demand, and operational efficiency.</p>
+      </div>
+      <div>
+        <h4>Telemedicine Integration</h4>
+        <p>Seamless video consultation capabilities integrated directly into the E-Vuze platform.</p>
+      </div>
+      <div>
+        <h4>Medical Records System</h4>
+        <p>Secure, cloud-based patient medical history accessible across all healthcare providers.</p>
+      </div>
+      <div>
+        <h4>Regional Expansion</h4>
+        <p>Scaling E-Vuze across East Africa and beyond, adapting to each region's unique needs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="collab-band">
+      <div>
+        <h2>Want to Collaborate?</h2>
+        <p>We're always looking for healthcare providers, technology partners, and investors who share our vision to transform Africa's digital healthcare infrastructure.</p>
+      </div>
+      <a href="contact.html" class="btn btn-white">Let's Talk ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-brand">📈 Ubwenge Lab</div>
+      <p>Building intelligent healthcare infrastructure for Africa</p>
+      <p>We design platforms that transform healthcare delivery, reduce wait times, and integrate AI to guide decisions.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="impact.html">Impact</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li>✉ info@ubwengelab.rw</li>
+        <li>📍 Kigali, Rwanda</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Ubwenge Lab Ltd. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
